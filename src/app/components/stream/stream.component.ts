@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import * as flvjs from '../../../../node_modules/flv.js/dist/flv';
+
+declare var videojs: any;
 
 @Component({
   selector: 'app-stream',
@@ -11,16 +12,16 @@ export class StreamComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    var videoElement = document.getElementById('videoElement');
-    var flvPlayer = flvjs.createPlayer({
-      type: 'flv',
-      isLive: true,
-      url: 'http://localhost:8888/live/STREAM_NAME.flv'
-
-    });
-      flvPlayer.attachMediaElement(videoElement);
-      flvPlayer.load();
-      flvPlayer.play();
-      //}
+    var options = 
+    {
+    plugins: {
+        httpSourceSelector:
+        {
+        default: 'auto'
+        }
+    }
+    };
+    var player = videojs('video-player', options);
+    player.httpSourceSelector();
   }
 }

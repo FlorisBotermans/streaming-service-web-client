@@ -1,1 +1,22 @@
-<video id="videoElement" width='100%' class="vjs-default-skin mr-4 vjs-big-play-centered vjs-16-9" controls></video>
+<div class="wrapper one-nav-pad">
+  <div class="container-fluid h-100">
+    <div class="row m-0 w-100 h-100">
+      <div class="col-12 col-md-6 p-0">
+        <div class="header d-flex align-items-center justify-content-center h-100">
+          <h1 class="m-0 text-center text-white">Streaming project</h1>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 p-0">
+        <div class="video-section d-flex align-items-center justify-content-center h-100">
+          <video id='video-player' class='video-js vjs-big-play-centered' controls preload='auto' width='640' height='360' data-setup='{}'>
+            <source src='http://192.168.178.28:1935/vod/smil:bigbuckbunny.smil/manifest.mpd' type='application/dash+xml'>
+            <p class="vjs-no-js">
+              To view this video please enable JavaScript, and consider upgrading to a web browser that
+              <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+            </p>
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
