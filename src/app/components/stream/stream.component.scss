@@ -1,5 +1,5 @@
 .wrapper {
-  background: linear-gradient(rgb(8, 9, 92),rgb(83, 79, 79)) no-repeat center center;
+  background: linear-gradient(#011A27,#094768) no-repeat center center;
   height: calc(100vh - 50px);
   min-height: 100%;
   min-width: 100%;
@@ -7,7 +7,7 @@
 }
 
 h1 {
-  background: #1eb859;
+  background: rgb(207, 222, 243);
   background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: bold;
