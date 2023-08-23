@@ -1,3 +1,2 @@
 # StreamingServiceWebClient
-
-PoC for a streaming service using RTMP
+PoC web client for a streaming service using RTMP
